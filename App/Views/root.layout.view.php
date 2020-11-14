@@ -16,9 +16,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="?c=home">Ubytovanie <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="?c=home&a=news">Ubytovanie <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="?c=home&a=gallery">Galéria</a>
-                <a class="nav-item nav-link" href="kalendar.html">Kalendár</a>
+                <a class="nav-item nav-link" href="?c=home&a=calendar">Kalendár</a>
                 <a class="nav-item nav-link" href="?c=home&a=contact">Kontakt</a>
             </div>
         </div>

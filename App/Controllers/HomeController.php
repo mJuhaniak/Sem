@@ -33,4 +33,14 @@ class HomeController extends AControllerBase
     {
         return ['meno' => 'Patrik Hrkút'];
     }
+
+    public function news()
+    {
+        return ['meno' => 'Patrik Hrkút'];
+    }
+
+    public function calendar()
+    {
+        return ['meno' => 'Patrik Hrkút'];
+    }
 }
