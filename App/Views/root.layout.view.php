@@ -8,14 +8,22 @@
         <link rel="stylesheet" href="public/css.css">
     </head>
     <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Super úžasná stránka</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark active" href="?c=home">Domov</a>
-            <a class="p-2 text-dark" href="?c=home&a=contact">Kontakt</a>
-        </nav>
 
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style = "background-color: #1B263B">
+        <a class="navbar-brand" href="?c=home">Úvod</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="?c=home">Ubytovanie <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="?c=home&a=gallery">Galéria</a>
+                <a class="nav-item nav-link" href="kalendar.html">Kalendár</a>
+                <a class="nav-item nav-link" href="?c=home&a=contact">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="web-content">
         <?= $contentHTML ?>
     </div>

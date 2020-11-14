@@ -1,4 +1,5 @@
 <?php /** @var Array $data */ ?>
+
 <div class="container">
     <h1 class="mt-5">Kde nás najdete?</h1>
     <p class="lead">Wiki, World Wide Web (WWW) site that can be modified or contributed to by users. Wikis can be dated to 1995, when American computer programmer Ward Cunningham created a new collaborative technology for organizing information on Web sites. Using a Hawaiian term meaning “quick,” he called this new software WikiWikiWeb, attracted by its alliteration and also by its matching abbreviation (WWW).</p>
