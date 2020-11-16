@@ -9,7 +9,12 @@ class HomeController extends AControllerBase
 
     public function index()
     {
-        return ['meno' => 'Patrik Hrkút'];
+        return ['name' => 'Úvod', 'info' => 'textUvod'];
+    }
+
+    public function reservation()
+    {
+        return ['name' => 'Úvod', 'info' => 'textUvod'];
     }
 
     public function contact(){
@@ -26,21 +31,23 @@ class HomeController extends AControllerBase
         return [
           'lng' => rand($lng_min*100000,$lng_max *100000) /100000,
           'lat' => rand($lat_min*100000,$lat_max *100000) /100000,
+            'name' => 'Kontakt',
+            'info' => "textKontakt"
         ];
     }
 
     public function gallery()
     {
-        return ['meno' => 'Patrik Hrkút'];
+        return ['name' => 'Galeria', 'info' => "textGallery"];
     }
 
     public function news()
     {
-        return ['meno' => 'Patrik Hrkút'];
+        return ['name' => 'Novinky', 'info' => "textNovinky"];
     }
 
     public function calendar()
     {
-        return ['meno' => 'Patrik Hrkút'];
+        return ['name' => 'Kalendár', 'info' => "textKalendar"];
     }
 }

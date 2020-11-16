@@ -1,13 +1,47 @@
-.lead {
-    color: aquamarine;
-}
-
 .card {
     float: left;
     margin-top: 5%;
     margin-left: 18%;
     margin-bottom: 5%;
     width: 20rem;
+}
+
+.content {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 2%;
+}
+
+.centered {
+    font-size: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered h1 {
+    font-size: 4vw;
+}
+
+.up {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
+.text {
+    font-size: 1.7vw;
+    padding: 2%;
+    margin: 5% 10%;
+    border: 1px solid black;
+}
+
+.text h2 {
+    font-size: 2.5vw;
 }
 
 .gallery {
@@ -29,6 +63,10 @@ div.image:hover {
 div.image img {
     width: 300px;
     height: 170px;
+}
+
+div, ul, li{
+    list-style-type: none;
 }
 
 .planner{
@@ -101,4 +139,12 @@ td > span:hover{
     color: white;
     background-color: #98cd60;
 }
+
+
+
+
+
+
+
+
 
