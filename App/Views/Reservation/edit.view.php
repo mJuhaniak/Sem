@@ -1,7 +1,4 @@
-<?php /** @var Array $data */
-/** @var \App\Models\Article $article */
-$article = $data['article'];
-?>
+<?php /** @var Array $data */?>
 
 <div class="container">
     <div class="row">
@@ -9,14 +6,10 @@ $article = $data['article'];
 
             <form method="post">
                 <div class="form-group">
-                    <label>Titulok</label>
-                    <input name="title" type="text" class="form-control" value="<?=$article->getTitle()?>">
+                    <label style="margin-top: 50px">Zadajte meno a priezvisko</label>
+                    <input name="name" type="text" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label>Text</label>
-                    <textarea name="text" class="form-control"><?=$article->getText()?></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" style="margin-bottom: 50px">Submit</button>
             </form>
 
         </div>

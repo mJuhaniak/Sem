@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-class DbStorage extends AStorage
+class DbStorage
 {
     private $user = 'root';
     private $pass = 'dtb456';
-    private $db = 'blog';
+    private $db = 'reservations';
     private $host = 'localhost';
 
     private PDO $pdo;
@@ -23,21 +23,27 @@ class DbStorage extends AStorage
 
 
     /**
-     * @return Article[]
+     * @return Reservation[]
      */
     public function getAll() : array {
-        $stmt = $this->pdo->query("SELECT * FROM articles");
-        $articles=[];
+        $stmt = $this->pdo->query("SELECT * FROM reservations");
+        $reservations=[];
         while ($row = $stmt->fetch()) {
-            $article = new Article($row['title'], $row['text']);
-            $articles[] = $article;
+            $reservation = new Reservation($row['arrival_date'], $row['departure_date'], $row['name'], $row['people'], $row['phone']);
+            $reservations[] = $reservation;
         }
-        return $articles;
+        return $reservations;
     }
 
-    public function saveArticle(Article $article)
+    public function saveReservation(Reservation $reservation)
     {
-        $stmt = $this->pdo->prepare("INSERT INTO articles (title, text) VALUES (?, ?)");
-        $stmt->execute([$article->getTitle(), $article->getText()]);
+        $stmt = $this->pdo->prepare("INSERT INTO reservations (arrival_date, departure_date, name, people, phone) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$reservation->getArrivalDate(), $reservation->getDepartureDate(), $reservation->getName(), $reservation->getPeople(), $reservation->getPhone()]);
+    }
+
+    public function createPost(string $arrival_date, string $departure_date, string $name, int $people, string $phone)
+    {
+        $reservation = new Reservation($arrival_date, $departure_date, $name, $people, $phone);
+        $this->saveReservation($reservation);
     }
 }

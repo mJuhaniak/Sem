@@ -15,7 +15,7 @@ use PDOException;
 abstract class Model
 {
     private static $db = null;
-    private static $pkColumn = 'id';
+    private static $pkColumn = 'arrival_date';
 
     abstract static public function setDbColumns();
 
