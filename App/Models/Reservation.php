@@ -6,21 +6,23 @@ use DateTime;
 
 class Reservation extends Model
 {
-    protected $arrival_date;
-    protected $departure_date;
+
+    protected $id;
+    protected ?string $arrival_date;
+    protected ?string $departure_date;
     protected ?string $name;
     protected ?int $people;
-    protected $phone;
+    protected ?string $phone;
 
     /**
      * Reservation constructor.
-     * @param $arrival_date
-     * @param $departure_date
+     * @param string|null $arrival_date
+     * @param string|null $departure_date
      * @param string|null $name
-     * @param int $people
-     * @param $phone
+     * @param int|null $people
+     * @param string|null $phone
      */
-    public function __construct($arrival_date = null, $departure_date = null, ?string $name = null, ?int $people = null, $phone = null)
+    public function __construct(?string $arrival_date = null, ?string $departure_date = null, ?string $name = null, ?int $people = null, ?string $phone = null)
     {
         $this->arrival_date = $arrival_date;
         $this->departure_date = $departure_date;
@@ -31,7 +33,7 @@ class Reservation extends Model
 
     static public function setDbColumns()
     {
-        return ['arrival_date', 'departure_date', 'name', 'people', 'phone'];
+        return ['id', 'arrival_date', 'departure_date', 'name', 'people', 'phone'];
     }
     static public function setTableName()
     {
@@ -39,7 +41,7 @@ class Reservation extends Model
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getArrivalDate()
     {
@@ -47,15 +49,15 @@ class Reservation extends Model
     }
 
     /**
-     * @param mixed $arrival_date
+     * @param string|null $arrival_date
      */
-    public function setArrivalDate($arrival_date): void
+    public function setArrivalDate(?string $arrival_date): void
     {
         $this->arrival_date = $arrival_date;
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getDepartureDate()
     {
@@ -63,9 +65,9 @@ class Reservation extends Model
     }
 
     /**
-     * @param mixed $departure_date
+     * @param string|null $departure_date
      */
-    public function setDepartureDate($departure_date): void
+    public function setDepartureDate(?string $departure_date): void
     {
         $this->departure_date = $departure_date;
     }
@@ -103,7 +105,7 @@ class Reservation extends Model
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getPhone()
     {
@@ -111,10 +113,19 @@ class Reservation extends Model
     }
 
     /**
-     * @param mixed $phone
+     * @param string|null $phone
      */
-    public function setPhone($phone): void
+    public function setPhone(?string $phone): void
     {
         $this->phone = $phone;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
 }

@@ -70,16 +70,14 @@ div, ul, li{
 }
 
 .planner{
-
-
     font-family: 'Open Sans', sans-serif;
     width: 394px;
-    margin: 100px auto;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
     border-radius: 5px;
     overflow: hidden;
     float: left;
-    margin-left: 17%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
 
 .calendar{

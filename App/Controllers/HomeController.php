@@ -45,9 +45,4 @@ class HomeController extends AControllerBase
     {
         return ['name' => 'Novinky', 'info' => "textNovinky"];
     }
-
-    public function calendar()
-    {
-        return ['name' => 'Kalendár', 'info' => "textKalendar"];
-    }
 }

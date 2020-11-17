@@ -16,9 +16,9 @@ class ReservationController extends AControllerBase
 
     public function add()
     {
-        if (isset($_POST['title'])) {
-            $article = new Reservation($_POST['title'], $_POST['text']);
-            $article->save();
+        if (isset($_POST['arrival_date'])) {
+            $reservation = new Reservation($_POST['arrival_date'], $_POST['departure_date'], $_POST['name'], $_POST['people'], $_POST['phone']);
+            $reservation->save();
             header("Location: ?c=reservation");
         }
         return ['name' => 'Rezervacie', 'info' => 'textRezervacie'];
@@ -26,9 +26,28 @@ class ReservationController extends AControllerBase
 
     public function edit()
     {
+        $id = $_GET['id'];
+        $reservation = new Reservation();
+        $reservation->getOne($id);
+
+        if (isset($_POST['arrival_date']))
         {
-            return ['name' => 'Rezervacie', 'info' => 'textRezervacie'];
+            $reservation->setArrivalDate($_POST['arrival_date']);
+            $reservation->setDepartureDate($_POST['departure_date']);
+            $reservation->setName($_POST['name']);
+            $reservation->setPeople($_POST['people']);
+            $reservation->setPhone($_POST['phone']);
+            $reservation->save();
+            header("Location: ?c=reservation");
         }
+
+        return ['name' => 'Rezervacie', 'info' => 'textRezervacie',
+            'reservation' => $reservation];
+    }
+
+    public function editUser()
+    {
+        return ['name' => 'Rezervacie', 'info' => 'textRezervacie'];
     }
 
     public function delete()

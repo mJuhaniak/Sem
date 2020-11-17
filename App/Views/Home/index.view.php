@@ -21,9 +21,9 @@
 <div class="card">
     <img class="card-img-top" src="https://t.aimg.sk/magaziny/P5NRr6JFTB_ThsbVVLltpg~Ilustra-n-foto.jpg?t=Lzk2MHg1NDAvc21hcnQ&h=8cSvplSnnYZrbFfNAv3llQ&e=2145916800&v=1" alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">Kalendár</h5>
+        <h5 class="card-title">Rezervácie</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="?c=home&a=calendar" class="btn btn-dark">Viac</a>
+        <a href="?c=reservation" class="btn btn-dark">Viac</a>
     </div>
 </div>
 
