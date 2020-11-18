@@ -26,7 +26,7 @@
                     <input name="phone" type="text" required pattern="^(09)([0-9]{2})+\s([0-9]{3})+\s([0-9]{3})" class="form-control"
                            title="Telefónne číslo zadajte vo formáte 09-- --- ---" value="0904 232 545">
                 </div>
-                <button type="submit" class="btn btn-success" style="margin-bottom: 50px">Potvrdiť</button>
+                <button type="submit" class="btn btn-success" style="margin-bottom: 50px">Odoslať</button>
                 <a href="?c=reservation" class="btn btn-primary" style="margin-bottom: 50px">Späť</a>
             </form>
         </div>

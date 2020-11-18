@@ -17,12 +17,7 @@ $reservation = $data['reservation']
                     <input name="departure_date" type="date" required
                            class="form-control" value="<?=$reservation->getDepartureDate()?>">
                 </div>
-                <div class="form-group">
-                    <label>Meno a priezvisko</label>
-                    <input name="name" type="text" required pattern="^[A-Z]{1}[a-zA-Z-]+\s[A-Z]{1}[a-zA-Z-]+$"
-                           title="Zadajte meno a priezvisko oddelené medzerou a s veľkým začiatočným písmenom"
-                           class="form-control" value="<?=$reservation->getName()?>">
-                </div>
+
                 <div class="form-group">
                     <label>Počet ľudí</label>
                     <input name="people" type="number" min="2" max="20" required
@@ -34,6 +29,7 @@ $reservation = $data['reservation']
                            title="Telefónne číslo zadajte vo formáte 09-- --- ---" class="form-control" value="<?=$reservation->getPhone()?>">
                 </div>
                 <button type="submit" class="btn btn-success" style="margin-bottom: 50px">Submit</button>
+                <a href="?c=reservation&a=editUser&name=<?=$reservation->getName()?>" class="btn btn-primary" style="margin-bottom: 50px">Späť</a>
             </form>
         </div>
     </div>

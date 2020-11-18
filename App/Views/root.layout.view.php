@@ -1,7 +1,7 @@
 <?php /** @var Array $data */ ?>
 <html>
     <head>
-        <title>Korytnička</title>
+        <title>Ubytovanie</title>
 
         <link rel = "icon" href="http://localhost/Sem/pictures/logo.png" type="image/x-icon">
 
@@ -23,7 +23,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="?c=home&a=news">Ubytovanie <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="?c=home&a=info">Info<span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="?c=home&a=gallery">Galéria</a>
                 <a class="nav-item nav-link" href="?c=home&a=contact">Kontakt</a>
                 <a class="nav-item nav-link" href="?c=reservation">Rezervácie</a>

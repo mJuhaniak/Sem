@@ -41,8 +41,8 @@ class HomeController extends AControllerBase
         return ['name' => 'Galeria', 'info' => "textGallery"];
     }
 
-    public function news()
+    public function info()
     {
-        return ['name' => 'Novinky', 'info' => "textNovinky"];
+        return ['name' => 'Info', 'info' => "textInfo"];
     }
 }

@@ -9,7 +9,7 @@ class ReservationController extends AControllerBase
 {
     public function index()
     {
-        return ['name' => 'Rezervacie', 'info' => 'textRezervacie'];
+        return ['name' => 'Rezervácie', 'info' => 'textRezervácie'];
     }
 
     public function add()
@@ -37,7 +37,7 @@ class ReservationController extends AControllerBase
                 header("Location: ?c=reservation");
             }
         }
-        return ['name' => 'Rezervacie', 'info' => 'textRezervacie'];
+        return ['name' => 'Rezervácie', 'info' => 'textRezervácie'];
     }
 
     public function edit()
@@ -66,18 +66,16 @@ class ReservationController extends AControllerBase
                      </div>";
             } else {
 
-                $name = $_POST['name'];
                 $reservation->setArrivalDate($_POST['arrival_date']);
                 $reservation->setDepartureDate($_POST['departure_date']);
-                $reservation->setName($_POST['name']);
                 $reservation->setPeople($_POST['people']);
                 $reservation->setPhone($_POST['phone']);
                 $reservation->save();
-                header("Location: ?c=reservation&a=editUser&name=" . $name);
+                header("Location: ?c=reservation&a=editUser&name=" . $reservation->getName());
             }
         }
 
-        return ['name' => 'Rezervacie', 'info' => 'textRezervacie',
+        return ['name' => 'Rezervácie', 'info' => 'textRezervácie',
             'reservation' => $reservation];
     }
 
@@ -86,12 +84,12 @@ class ReservationController extends AControllerBase
         if (isset($_POST['name'])) {
             header("Location: ?c=reservation&a=editUser&name=" . $_POST['name']);
         }
-        return ['name' => 'Rezervacie', 'info' => 'textRezervacie'];
+        return ['name' => 'Rezervácie', 'info' => 'textRezervácie'];
     }
 
     public function editUser()
     {
-        return ['name' => 'Rezervacie', 'info' => 'textRezervacie',
+        return ['name' => 'Rezervácie', 'info' => 'textRezervácie',
             'reservations' => Reservation::getAll($_GET['name'])];
     }
 

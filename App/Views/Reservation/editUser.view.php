@@ -12,7 +12,7 @@ foreach ($data['reservations'] as $reservation) {
             <p class="card-text"><?=$reservation->getDepartureDate()?></p>
             <h5>Počet ľudí:</h5>
             <p class="card-text"><?=$reservation->getPeople()?></p>
-            <h5>Telefóne číslo:</h5>
+            <h5>Telefónne číslo:</h5>
             <p class="card-text"><?=$reservation->getPhone()?></p>
             <a href="?c=reservation&a=edit&id=<?=$reservation->getId()?>" class="btn btn-primary btn-sm">Editovať</a>
             <a href="?c=reservation&a=delete&name=<?=$reservation->getName()?>&id=<?=$reservation->getId()?>" class="btn btn-danger btn-sm">Zmazať</a>
@@ -22,7 +22,7 @@ foreach ($data['reservations'] as $reservation) {
 if (count($data['reservations']) == 0) {
   ?>
     <div class="alert alert-danger" role="alert" style="width: 90%; margin-left: 5%; margin-top: 20px">
-        Pre <strong>"<?=$_GET['name']?>"</strong> neexistuje ziaden zaznam
+        Pre <strong>"<?=$_GET['name']?>"</strong> neexistujú žiadne záznamy
     </div>
 <?php
 }
