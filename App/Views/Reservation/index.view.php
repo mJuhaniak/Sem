@@ -2,7 +2,7 @@
 
 <div class="buttons">
     <a href="?c=reservation&a=add" class="btn btn-primary" style="margin-left: 10%">Pridať rezervaciu</a>
-    <a href="?c=reservation&a=editUser" class="btn btn-primary">Upraviť rezerváciu</a>
+    <a href="?c=reservation&a=chooseUser" class="btn btn-primary">Upraviť rezervácie</a>
 </div>
 
 <div class="planner">
@@ -235,17 +235,3 @@
     </div>
 </div>
 
-<?php
-/** @var \App\Models\Reservation $reservation */
-foreach ($data['reservations'] as $reservation) {
-?>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title"><?=$reservation->getName()?></h5>
-            <a href="?c=reservation&a=edit&id=<?=$reservation->getId()?>" class="btn btn-primary btn-sm">Editovať</a>
-            <a href="?c=reservation&a=delete&id=<?=$reservation->getId()?>" class="btn btn-danger btn-sm">Zmazať</a>
-            <p class="card-text"><?=$reservation->getArrivalDate()?> -> <?=$reservation->getDepartureDate()?></p>
-        </div>
-    </div>
-<?php }
-?>

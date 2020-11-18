@@ -9,7 +9,6 @@ class DbStorage
     private $pass = 'dtb456';
     private $db = 'reservations';
     private $host = 'localhost';
-
     private PDO $pdo;
 
     /**
@@ -18,7 +17,7 @@ class DbStorage
     public function __construct()
     {
         $this->pdo = new PDO("mysql:dbname={$this->db};host=$this->host", $this->user, $this->pass,
-                                [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,]);
+            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,]);
     }
 
 

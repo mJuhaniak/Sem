@@ -66,12 +66,13 @@ abstract class Model
 
     /**
      * Return an array of models from DB
+     * @param string $name
      * @return array
      */
-    static public function getAll()
+    static public function getAll(string $name)
     {
         self::connect();
-        $dbModels = self::$db->query("SELECT * FROM " . self::getTableName())->fetchAll();
+        $dbModels = self::$db->query("SELECT * FROM "  . self::getTableName() . " WHERE name='$name' ")->fetchAll();
         $models = [];
         foreach ($dbModels as $model) {
             $tmpModel = new static();
@@ -81,6 +82,7 @@ abstract class Model
             }
             $models[] = $tmpModel;
         }
+
         return $models;
     }
 

@@ -6,7 +6,6 @@ use DateTime;
 
 class Reservation extends Model
 {
-
     protected $id;
     protected ?string $arrival_date;
     protected ?string $departure_date;

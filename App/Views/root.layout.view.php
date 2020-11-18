@@ -1,7 +1,9 @@
 <?php /** @var Array $data */ ?>
 <html>
     <head>
-        <title>Super úžasná stránka</title>
+        <title>Korytnička</title>
+
+        <link rel = "icon" href="http://localhost/Sem/pictures/logo.png" type="image/x-icon">
 
         <link rel="stylesheet" href="http://localhost/Sem/public/css.css">
         <!-- CSS -->

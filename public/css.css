@@ -76,8 +76,7 @@ div, ul, li{
     border-radius: 5px;
     overflow: hidden;
     float: left;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin: 5% 0% 5% 5%;
 }
 
 .calendar{
@@ -146,6 +145,8 @@ td > span:hover{
     position: center;
     margin-top: 50px;
 }
+
+
 
 
 
