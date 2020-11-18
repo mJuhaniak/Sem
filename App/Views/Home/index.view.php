@@ -1,5 +1,5 @@
 <?php /** @var Array $data */ ?>
-
+<div class="cards">
 <div class="card">
     <img class="card-img-top" src="https://cf.bstatic.com/images/hotel/max1024x768/229/229488709.jpg" alt="Card image cap">
     <div class="card-body">
@@ -35,6 +35,6 @@
         <a href="?c=home&a=contact" class="btn btn-dark">Viac</a>
     </div>
 </div>
-
+</div>
 
 

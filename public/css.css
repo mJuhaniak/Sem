@@ -1,8 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 .card {
     float: left;
-    margin-top: 5%;
-    margin-left: 18%;
-    margin-bottom: 5%;
+    margin: 5% 0% 5% 18%;
     width: 20rem;
 }
 

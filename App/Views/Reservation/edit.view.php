@@ -30,9 +30,8 @@ $reservation = $data['reservation']
                 </div>
                 <div class="form-group">
                     <label>Telefónne číslo</label>
-                    <input name="phone" type="text" required pattern="^(09)\d{8}"
-                           title="Telefónne číslo zadajte vo formáte 09-- --- ---"
-                           class="form-control" value="<?=$reservation->getPhone()?>">
+                    <input name="phone" type="text" required pattern="^(09)([0-9]{2})+\s([0-9]{3})+\s([0-9]{3})"
+                           title="Telefónne číslo zadajte vo formáte 09-- --- ---" class="form-control" value="<?=$reservation->getPhone()?>">
                 </div>
                 <button type="submit" class="btn btn-success" style="margin-bottom: 50px">Submit</button>
             </form>
